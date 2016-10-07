@@ -28,7 +28,6 @@ class ProductController extends Controller {
         ));
     }
 
-
     public function imagenesAction($id) {
 
         $em = $this->getDoctrine()->getManager();
@@ -46,7 +45,6 @@ class ProductController extends Controller {
         $response->headers->set('Content-Type', 'application/json');
 
         return $response;
-
     }
 
     public function uploadAction(Request $request, $id) {
@@ -117,12 +115,14 @@ class ProductController extends Controller {
 
         if ($form->isValid()) {
             $em = $this->getDoctrine()->getManager();
-            $entity->setFechaAlta(new \DateTime());
             $usuario = $this->get('security.token_storage')->getToken()->getUser();
             $entity->setUserAdd($usuario);
             $entity->setUserMod($usuario);
             $entity->setDateAdd(new \DateTime());
             $entity->setDateMod(new \DateTime());
+            $entity->setDateUpdate(new \DateTime());
+            $entity->setState(Product::published);
+
             $em->persist($entity);
             $em->flush();
 

@@ -33,18 +33,18 @@ class Article {
     private $title;
 
     /**
-     * @var string
+     * @var text
      *
      * @ORM\Column(name="introtext", type="text")
      */
     private $introtext;
 
     /**
-     * @var string
+     * @var text
      *
-     * @ORM\Column(name="fulltext", type="text")
+     * @ORM\Column(name="textfull", type="text")
      */
-    private $fullText;
+    private $textfull;
 
     /**
      * @var string
@@ -107,10 +107,6 @@ class Article {
         return $this->introtext;
     }
 
-    function getFullText() {
-        return $this->fullText;
-    }
-
     function getState() {
         return $this->state;
     }
@@ -146,11 +142,7 @@ class Article {
     function setIntrotext($introtext) {
         $this->introtext = $introtext;
     }
-
-    function setFullText($fullText) {
-        $this->fullText = $fullText;
-    }
-
+   
     function setState($state) {
         $this->state = $state;
     }
@@ -178,7 +170,17 @@ class Article {
     function setImages($images) {
         $this->images = $images;
     }
+    
+    function getTextFull() {
+        return $this->textfull;
+    }
 
+    function setTextFull($textfull) {
+        $this->textfull = $textfull;
+    }
+
+    
+    
     public function setImagenes($imagenes) {
         foreach ($imagenes as $imagen) {
             $imagen->setVehiculo($this);

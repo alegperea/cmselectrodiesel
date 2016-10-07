@@ -30,8 +30,8 @@ class ProductType extends AbstractType {
             },
                 ))
                 ->add('code', TextType::class, array('attr' => array('class' => 'form-control')))
-                ->add('introText', TextareaType::class, array('attr' => array('class' => 'form-control')))
-                ->add('fullText', TextareaType::class, array('attr' => array('class' => 'form-control')))
+                ->add('introtext', TextareaType::class, array('attr' => array('class' => 'form-control')))
+                ->add('textfull', TextareaType::class, array('attr' => array('class' => 'form-control')))
                 ->add('price', IntegerType::class, array('attr' => array('class' => 'form-control')))
                 ->add('equivalences', TextType::class, array('attr' => array('class' => 'form-control')))
                 ->add('mark', TextType::class, array('attr' => array('class' => 'form-control')))

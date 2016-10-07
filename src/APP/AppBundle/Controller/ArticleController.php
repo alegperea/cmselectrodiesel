@@ -112,6 +112,7 @@ class ArticleController extends Controller {
     public function createAction(Request $request) {
         $entity = new Article();
         $form = $this->CreateForm(ArticleType::class, $entity);
+        
         $form->handleRequest($request);
 
         if ($form->isValid()) {
@@ -121,6 +122,7 @@ class ArticleController extends Controller {
             $entity->setUserMod($usuario);
             $entity->setDateAdd(new \DateTime());
             $entity->setDateMod(new \DateTime());
+            $entity->setState(Article::published);
             $em->persist($entity);
             $em->flush();
 

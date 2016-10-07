@@ -29,8 +29,8 @@ class ArticleType extends AbstractType {
             },
                 ))
                 ->add('title', TextType::class, array('attr' => array('class' => 'form-control')))
-                ->add('introText', TextareaType::class, array('attr' => array('class' => 'form-control')))
-                ->add('fullText', TextareaType::class, array('attr' => array('class' => 'form-control')));
+                ->add('introtext', TextareaType::class, array('attr' => array('class' => 'form-control')))
+                ->add('textfull', TextareaType::class, array('attr' => array('class' => 'form-control')));
     }
 
     /**
@@ -43,7 +43,7 @@ class ArticleType extends AbstractType {
     }
 
     public function getName() {
-        return 'app_appbundle_vehiculo';
+        return 'app_appbundle_article';
     }
 
     /**

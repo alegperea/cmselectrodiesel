@@ -33,18 +33,18 @@ class Product {
     private $code;
 
     /**
-     * @var string
+     * @var text
      *
      * @ORM\Column(name="introtext", type="text")
      */
     private $introtext;
 
     /**
-     * @var string
+     * @var text
      *
-     * @ORM\Column(name="fulltext", type="text")
+     * @ORM\Column(name="textfull", type="text")
      */
-    private $fullText;
+    private $textfull;
 
     /**
      * @var string
@@ -134,11 +134,7 @@ class Product {
     function getIntrotext() {
         return $this->introtext;
     }
-
-    function getFullText() {
-        return $this->fullText;
-    }
-
+  
     function getState() {
         return $this->state;
     }
@@ -170,16 +166,12 @@ class Product {
     function setIntrotext($introtext) {
         $this->introtext = $introtext;
     }
-
-    function setFullText($fullText) {
-        $this->fullText = $fullText;
-    }
-
+    
     function setState($state) {
         $this->state = $state;
     }
 
-    function setCategory(APP\AppBundle\Entity\Category $category) {
+    function setCategory($category) {
         $this->category = $category;
     }
 
@@ -191,11 +183,11 @@ class Product {
         $this->userMod = $userMod;
     }
 
-    function setDateAdd(\DateTime $dateAdd) {
+    function setDateAdd($dateAdd) {
         $this->dateAdd = $dateAdd;
     }
 
-    function setDateMod(\DateTime $dateMod) {
+    function setDateMod($dateMod) {
         $this->dateMod = $dateMod;
     }
 
@@ -231,7 +223,14 @@ class Product {
         $this->mark = $mark;
     }
 
-        
+    function getTextfull() {
+        return $this->textfull;
+    }
+
+    function setTextfull($textfull) {
+        $this->textfull = $textfull;
+    }
+            
     public function setImages($images) {
         foreach ($images as $image) {
             $image->setProduct($this);
@@ -248,6 +247,10 @@ class Product {
     public function addImages($images) {
         $images->setProduct($this);
         $this->$images->add($images);
+    }
+    
+    public function __toString() {
+        return $this->category;
     }
 
 }

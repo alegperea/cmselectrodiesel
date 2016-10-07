@@ -27,6 +27,7 @@
                         <tbody>
                             {% for item in entities %}
                                 <tr>
+                                    <td>{{ item.id }}</td>
                                     <td>{{ item.code }}</td>
                                     <td>{{ item.introText }}</td>
                                     <td><span class="label label-info">{{ item.category.title }}</span></td>
