@@ -1,0 +1,52 @@
+product:
+    path:  /
+    defaults: { _controller: "AppBundle:Product:index" }
+
+product_show:
+    path:  /{id}/show
+    defaults: { _controller: "AppBundle:Product:show" }
+    
+product_vender:
+    path:  /{id}/vender
+    defaults: { _controller: "AppBundle:Product:vender" }
+
+product_new:
+    path:  /new
+    defaults: { _controller: "AppBundle:Product:new" }
+
+product_create:
+    path:  /create
+    defaults: { _controller: "AppBundle:Product:create" }
+    requirements: { _method: post }
+    
+product_edit:
+    path:  /{id}/edit
+    defaults: { _controller: "AppBundle:Product:edit" }
+
+product_update:
+    path:  /{id}/update
+    defaults: { _controller: "AppBundle:Product:update" }
+    requirements: { _method: post }
+
+paginas_inicio:
+    path:  /paginasinicio
+    defaults: { _controller: "AppBundle:Product:paginasInicio" }
+    requirements: { _method: post }
+
+product_eliminar:
+    path:  /eliminar
+    defaults: { _controller: "AppBundle:Product:eliminar" }
+    requirements: { _method: post }
+    
+product_delete:
+    path:  /{id}/delete
+    defaults: { _controller: "AppBundle:Product:delete" }
+    requirements: { _method: post|delete }
+    
+product_upload:
+  path:     /{id}/upload
+  defaults: { _controller: "AppBundle:Product:upload" }
+
+product_imagenes:
+  path:     /{id}/imagenes
+  defaults: { _controller: "AppBundle:Product:imagenes" }

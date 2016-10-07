@@ -1,0 +1,52 @@
+article:
+    path:  /
+    defaults: { _controller: "AppBundle:Article:index" }
+
+article_show:
+    path:  /{id}/show
+    defaults: { _controller: "AppBundle:Article:show" }
+    
+article_vender:
+    path:  /{id}/vender
+    defaults: { _controller: "AppBundle:Article:vender" }
+
+article_new:
+    path:  /new
+    defaults: { _controller: "AppBundle:Article:new" }
+
+article_create:
+    path:  /create
+    defaults: { _controller: "AppBundle:Article:create" }
+    requirements: { _method: post }
+    
+article_edit:
+    path:  /{id}/edit
+    defaults: { _controller: "AppBundle:Article:edit" }
+
+article_update:
+    path:  /{id}/update
+    defaults: { _controller: "AppBundle:Article:update" }
+    requirements: { _method: post }
+
+paginas_inicio:
+    path:  /paginasinicio
+    defaults: { _controller: "AppBundle:Article:paginasInicio" }
+    requirements: { _method: post }
+
+article_eliminar:
+    path:  /eliminar
+    defaults: { _controller: "AppBundle:Article:eliminar" }
+    requirements: { _method: post }
+    
+article_delete:
+    path:  /{id}/delete
+    defaults: { _controller: "AppBundle:Article:delete" }
+    requirements: { _method: post|delete }
+    
+article_upload:
+  path:     /{id}/upload
+  defaults: { _controller: "AppBundle:Article:upload" }
+
+article_imagenes:
+  path:     /{id}/imagenes
+  defaults: { _controller: "AppBundle:Article:imagenes" }

@@ -10,13 +10,13 @@ class DefaultController extends Controller {
         return $this->render('FrontBundle:Default:index.html.twig');
     }
 
-    public function vehiculosAction() {
+    public function articlesAction() {
         
         $em = $this->getDoctrine()->getManager();
 
-        $entities = $em->getRepository('AppBundle:Vehiculo')->vehiculosPublicados();
+        $entities = $em->getRepository('AppBundle:Article')->findAll();
 
-        return $this->render('FrontBundle:Default:vehiculos.html.twig', array(
+        return $this->render('FrontBundle:Default:articles.html.twig', array(
                     'entities' => $entities,
         ));
     }

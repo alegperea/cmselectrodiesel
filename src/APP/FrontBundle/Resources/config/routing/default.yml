@@ -2,6 +2,6 @@ front_index:
     path: /
     defaults: { _controller: FrontBundle:Default:index }
     
-front_vehiculos:
-    path: /vehiculos
-    defaults: { _controller: FrontBundle:Default:vehiculos }
+front_article:
+    path: /articulos
+    defaults: { _controller: FrontBundle:Default:articles }

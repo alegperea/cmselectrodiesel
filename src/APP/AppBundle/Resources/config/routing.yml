@@ -6,26 +6,15 @@ AppBundle_default:
     resource: "@AppBundle/Resources/config/routing/default.yml"
     prefix:   /
     
-AppBundle_vehiculo:
-    resource: "@AppBundle/Resources/config/routing/vehiculo.yml"
-    prefix:   /vehiculos
+AppBundle_article:
+    resource: "@AppBundle/Resources/config/routing/article.yml"
+    prefix:   /articulos
 
-AppBundle_categoria:
-    resource: "@AppBundle/Resources/config/routing/categoria.yml"
+AppBundle_category:
+    resource: "@AppBundle/Resources/config/routing/category.yml"
     prefix:   /categorias
 
-AppBundle_compania:
-    resource: "@AppBundle/Resources/config/routing/compania.yml"
-    prefix:   /companias
     
-AppBundle_cliente:
-    resource: "@AppBundle/Resources/config/routing/cliente.yml"
-    prefix:   /clientes
-    
-AppBundle_proveedor:
-    resource: "@AppBundle/Resources/config/routing/proveedor.yml"
-    prefix:   /proveedores
-    
-AppBundle_venta:
-    resource: "@AppBundle/Resources/config/routing/venta.yml"
-    prefix:   /venta
+AppBundle_product:
+    resource: "@AppBundle/Resources/config/routing/product.yml"
+    prefix:   /productos

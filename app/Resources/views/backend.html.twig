@@ -43,6 +43,37 @@
 
                                         </ul>
                                     </li>
+
+                                    <li><a><i class="fa fa-newspaper-o"></i> Artículos <span class="fa fa-chevron-down"></span></a>
+                                        <ul class="nav child_menu" style="display: none">
+                                            <li><a href="{{ path('article') }}">Listado de Artículos</a>
+                                            </li>
+                                            <li><a href="{{ path('article_new') }}">Crear Artículo</a>
+                                            </li>
+
+                                        </ul>
+                                    </li>
+
+                                    <li><a><i class="fa  fa-cogs"></i> Productos <span class="fa fa-chevron-down"></span></a>
+                                        <ul class="nav child_menu" style="display: none">
+                                            <li><a href="{{ path('product') }}">Listado de Productos</a>
+                                            </li>
+                                            <li><a href="{{ path('product_new') }}">Crear Producto</a>
+                                            </li>
+
+                                        </ul>
+                                    </li>
+
+                                    <li><a><i class="fa fa-folder"></i> Categorias <span class="fa fa-chevron-down"></span></a>
+                                        <ul class="nav child_menu" style="display: none">
+                                            <li><a href="{{ path('category') }}">Listado de Categorias</a>
+                                            </li>
+                                            <li><a href="{{ path('category_new') }}">Crear Categoria</a>
+                                            </li>
+
+                                        </ul>
+                                    </li>
+
                                     <li><a><i class="fa fa-user"></i> Usuarios <span class="fa fa-chevron-down"></span></a>
                                         <ul class="nav child_menu" style="display: none">
                                             <li><a href="{{ path('usuario') }}">Listado de usuarios</a>
@@ -61,54 +92,7 @@
 
                                         </ul>
                                     </li> 
-                                    <li><a><i class="fa fa-automobile"></i> Vehiculos <span class="fa fa-chevron-down"></span></a>
-                                        <ul class="nav child_menu" style="display: none">
-                                            <li><a href="{{ path('vehiculo') }}">Listado de vehiculos</a>
-                                            </li>
-                                            <li><a href="{{ path('vehiculo_new') }}">Crear vehiculo</a>
-                                            </li>
 
-                                        </ul>
-                                    </li>
-                                    <li><a><i class="fa fa-folder-open"></i> Categorias <span class="fa fa-chevron-down"></span></a>
-                                        <ul class="nav child_menu" style="display: none">
-                                            <li><a href="{{ path('categoria') }}">Listado de categorias</a>
-                                            </li>
-                                            <li><a href="{{ path('categoria_new') }}">Crear categoria</a>
-                                            </li>
-
-                                        </ul>
-                                    </li>
-                                    <li><a><i class="fa fa-file-text"></i> Companía <span class="fa fa-chevron-down"></span></a>
-                                        <ul class="nav child_menu" style="display: none">
-                                            <li><a href="{{ path('compania') }}">Listado de compania</a>
-                                            </li>
-                                            <li><a href="{{ path('compania_new') }}">Crear compania</a>
-                                            </li>
-
-                                        </ul>
-                                    </li>
-                                    <li><a><i class="fa fa-smile-o"></i> Clientes <span class="fa fa-chevron-down"></span></a>
-                                        <ul class="nav child_menu" style="display: none">
-                                            <li><a href="{{ path('cliente') }}">Listado de clientes</a>
-                                            </li>
-                                            <li><a href="{{ path('cliente_new') }}">Crear cliente</a>
-                                            </li>
-
-                                        </ul>
-                                    </li>
-                                    <li><a><i class="fa fa-truck"></i> Proveedor <span class="fa fa-chevron-down"></span></a>
-                                        <ul class="nav child_menu" style="display: none">
-                                            <li><a href="{{ path('proveedor') }}">Listado de proveedores</a>
-                                            </li>
-                                            <li><a href="{{ path('proveedor_new') }}">Crear proveedor</a>
-                                            </li>
-
-                                        </ul>
-                                    </li>
-                                    <li><a href="{{ path('venta') }}"><i class="fa fa-money"></i> Ventas </a>
-                                        
-                                    </li>
                                 </ul>
                             </div>           
 
@@ -178,18 +162,18 @@
 
                     {% block contenido %}
                     {% endblock %}  
-                    <!-- footer content -->
 
-                    <footer>
-                        <div class="copyright-info">
-                            <p class="pull-right">Consola Push 
-                            </p>
-                        </div>
-                        <div class="clearfix"></div>
-                    </footer>
-                    <!-- /footer content -->
                 </div>
+                <!-- footer content -->
 
+                <footer>
+                    <div class="copyright-info">
+                        <p class="pull-right">Consola Push 
+                        </p>
+                    </div>
+                    <div class="clearfix"></div>
+                </footer>
+                <!-- /footer content -->
                 <!-- /page content -->
 
             </div>
